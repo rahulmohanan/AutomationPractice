@@ -3,8 +3,8 @@ let wdioConf = require('./wdio.conf.js');
 
 exports.config = merge(wdioConf.config, {
 
-  user: 'samplesoftwareautomation',
-  key: 'fbb789ad-c408-4d9f-b3d9-a5854589068d',
+  user: process.env.SAUCE_USERNAME,
+  key: process.env.SAUCE_ACCESS_KEY,
   region: 'us',
   sauceConnect: true,
 
